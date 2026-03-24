@@ -1,0 +1,53 @@
+body > h2{
+    background-color: #ffffff;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+
+  
+}
+body{
+    background-color: rgb(255, 0, 0);
+    margin: 0;
+    padding: 0;
+}
+
+div{
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+.cards {
+    margin-top: 150px;
+    display: flex;
+    padding: 20px;
+    background-color: #862727;
+}
+
+.cards {
+    display: flex;
+    background-color: #862727;
+}
+
+.cards section {
+    flex: 1;
+    padding: 40px 20px;
+    position: relative; /* important */
+    
+}
+
+/* create the short divider */
+.cards section::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 20%;
+    height: 100%;              /* controls line length */
+    width: 2px;
+    background-color: red;    /* bright divider color */
+}
+
+/* remove divider from last card */
+.cards section:last-child::after {
+    display: none;
+}
